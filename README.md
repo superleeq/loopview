@@ -3,10 +3,11 @@
 
 ##Screenshots
 ![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/one.png)
-![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/two.png)
-![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/three.png)
-![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/four.png)
-![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/slide.png)
+![two.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/two.png)
+![three.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/three.png)
+![four.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/four.png)
+![slide.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/slide.png)
+![slideleft.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/slideleft.png)
 
 ##LoopView有哪些功能？
 
