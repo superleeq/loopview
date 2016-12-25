@@ -1,7 +1,12 @@
-![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/one.png)
-
 ##LoopView是什么?
 一个提供了自动轮播和无限滑动的图片播放控件
+
+##Screenshots
+![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/one.png)
+![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/two.png)
+![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/three.png)
+![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/four.png)
+![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/slide.png)
 
 ##LoopView有哪些功能？
 
