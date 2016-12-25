@@ -1,3 +1,5 @@
+![image](https://github.com/superleeq/app/raw/master/raw/one.png)
+
 ##LoopView是什么?
 一个提供了自动轮播和无限滑动的图片播放控件
 
