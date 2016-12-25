@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.example.loopviewpager.app"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+//    buildTypes {
+//        release {
+//            minifyEnabled true
+////            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+}
+
+dependencies {
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.android.support:support-v4:22.0.0'
+}

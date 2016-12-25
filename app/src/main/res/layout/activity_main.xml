@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
+
+    <com.example.loopviewpager.app.loopview.LoopView
+        android:id="@+id/loopPlay"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp" />
+
+</FrameLayout>
