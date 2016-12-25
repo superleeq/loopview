@@ -7,7 +7,7 @@
 ![three.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/three.png)
 ![four.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/four.png)
 ![slide.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/slide.png)
-![slideleft.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/slideleft.png)
+![slideleft.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/sildeleft.png)
 
 ##LoopView有哪些功能？
 
