@@ -1,4 +1,4 @@
-![Image text](https://github.com/superleeq/loopview/raw/master/loopview/raw/one.png)
+![Image text](https://raw.githubusercontent.com/superleeq/loopview/master/loopview/raw/one.png)
 
 ##LoopView是什么?
 一个提供了自动轮播和无限滑动的图片播放控件
