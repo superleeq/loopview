@@ -21,5 +21,6 @@ android {
 
 dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-    compile 'com.android.support:support-v4:22.0.0'
+//    compile 'com.android.support:support-v4:22.0.0'
+    compile project(':mylibrary')
 }

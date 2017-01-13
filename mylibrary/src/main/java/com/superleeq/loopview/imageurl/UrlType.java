@@ -1,4 +1,4 @@
-package com.example.loopviewpager.app.imageurl;
+package com.superleeq.loopview.imageurl;
 
 /**
  * Created by superleeq on 2016/12/25.

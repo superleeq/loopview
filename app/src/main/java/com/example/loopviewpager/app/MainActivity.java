@@ -2,14 +2,13 @@ package com.example.loopviewpager.app;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
-import com.example.loopviewpager.app.imageurl.ImageUrl;
-import com.example.loopviewpager.app.imageurl.UrlType;
-import com.example.loopviewpager.app.loopview.LoopView;
+import com.superleeq.loopview.imageurl.ImageUrl;
+import com.superleeq.loopview.imageurl.UrlType;
+import com.superleeq.loopview.loopview.LoopView;
 
 import java.util.ArrayList;
 import java.util.List;

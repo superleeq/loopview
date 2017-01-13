@@ -1,4 +1,4 @@
-package com.example.loopviewpager.app.loopview;
+package com.superleeq.loopview.loopview;
 
 import android.widget.ImageView;
 

@@ -1,4 +1,4 @@
-package com.example.loopviewpager.app.loopview;
+package com.superleeq.loopview.loopview;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.loopviewpager.app.imageurl.ImageUrl;
+import com.superleeq.loopview.imageurl.ImageUrl;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;

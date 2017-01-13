@@ -1,4 +1,4 @@
-package com.example.loopviewpager.app.loopview;
+package com.superleeq.loopview.loopview;
 
 import android.content.Context;
 import android.os.Handler;
@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.AdapterView;
 
-import com.example.loopviewpager.app.indicate.IndicateLayout;
+import com.superleeq.loopview.indicate.IndicateLayout;
 
 import java.lang.ref.WeakReference;
 
