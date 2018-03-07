@@ -22,7 +22,7 @@ allprojects {
 Step 2.</br>
 ```javascript
 dependencies {
-	 compile 'com.github.superleeq:loopview:v2.6'
+	 compile 'com.github.superleeq:loopview:2.7'
 }
 ```
 
@@ -75,6 +75,7 @@ v1.0 初始版</br>
 v2.0 移除无用类</br>
 v2.5 简化loopview</br>
 v2.6 优化监听</br>
+v2.7 优化依赖名</br>
 
 ## 反馈</br>
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流</br>
