@@ -1,20 +1,32 @@
-##LoopView是什么?
-一个提供了自动轮播和无限滑动的图片播放控件
+##LoopView自动轮播控件
+1, 支持自动轮播，可以设置轮播间隔时间，默认2秒
+2, 支持无限滑动，采用首尾填充的方案，没有跳动感，达到真实流畅的无限滑动
+3, 支持任意第三方图片加载库，loopAdapter.setImageLoader即可
+4, 支持手动设置图片适配模式
 
 ##Screenshots
-![one.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/one.png)
-![two.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/two.png)
-![three.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/three.png)
-![four.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/four.png)
-![slide.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/slide.png)
-![slideleft.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/sildeleft.png)
+![demo.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/demo.png)
 
-##LoopView有哪些功能？
+##使用步骤：
+1,绑定图片
+    LoopAdapter loopAdapter = new LoopAdapter(this);
+    loopAdapter.setUrls(urls);
+    loopAdapter.setImageLoader(new AbstractLoopViewImageLoader() {
+            @Override
+            public void displyImage(String url, ImageView iv) {
+                iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                Glide.with(MainActivity.this).load(url).into(iv);
+            }
+        });
 
-* 自动轮播，提供轮播间隔时长控制，默认2秒
-* 无限滑动，采用首尾填充的方案，达到真实的无限滑动
-* 圆点指示器，标示当前图片
-
+2,设置adapter
+    loopView.setAdapter(loopAdapter);
+    loopView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(view.getContext(), "position:" + position, Toast.LENGTH_SHORT).show();
+            }
+    });
 
 ##有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
@@ -25,19 +37,3 @@
 ##为何开发LoopView
 项目需要一个无限轮播控件，一般都是两种方案，一是301230方式首尾填充，二是getCount()返回Integer.MAX_VALUE
 因第二种方案并不是真正的无限滑动，这里使用第一种方案实现
-
-
-##感谢
-感谢以下的项目：
-
-* compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5' 
-
-
-##关于作者
-
-```javascript
-    name  : superleeq
-    speciality : Android,javascript
-    city : 深圳
-    email : superleeq@foxmail.com
-```
