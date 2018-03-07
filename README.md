@@ -1,15 +1,15 @@
 ## LoopView自动轮播控件</br>
 
-1, 支持自动轮播，可以设置轮播间隔时间，默认2秒</br>
-2, 支持无限滑动，采用首尾填充的方案，没有跳动感，达到真实流畅的无限滑动</br>
-3, 支持任意第三方图片加载库，loopAdapter.setImageLoader即可</br>
-4, 支持手动设置图片适配模式</br>
+1，支持自动轮播，可以设置轮播间隔时间，默认2秒</br>
+2，支持无限滑动，采用首尾填充的方案，杜绝跳动感，达到真实流畅的无限滑动</br>
+3，支持任意第三方图片加载库</br>
+4，支持手动设置图片适配模式</br>
 
 ## Screenshots</br>
 ![demo.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/demo.png)
 
 ## 使用步骤：</br>
-1,绑定图片
+1，绑定图片
 ```javascript
     LoopAdapter loopAdapter = new LoopAdapter(this);
     loopAdapter.setUrls(urls);
@@ -22,7 +22,7 @@
           });
 ```
 
-2,设置adapter
+2，设置adapter
 ```javascript
     loopView.setAdapter(loopAdapter);
     loopView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
