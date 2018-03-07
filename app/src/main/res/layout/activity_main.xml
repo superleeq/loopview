@@ -10,4 +10,11 @@
         android:layout_width="fill_parent"
         android:layout_height="250dp" />
 
+    <ImageView
+        android:id="@+id/testiv"
+        android:background="#ffcc00"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
 </FrameLayout>

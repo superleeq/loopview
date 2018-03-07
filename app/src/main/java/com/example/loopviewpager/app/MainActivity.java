@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.superleeq.loopview.imageurl.ImageUrl;
-import com.superleeq.loopview.imageurl.UrlType;
+import com.bumptech.glide.Glide;
+import com.superleeq.loopview.loopview.AbstractLoopViewImageLoader;
+import com.superleeq.loopview.loopview.LoopAdapter;
 import com.superleeq.loopview.loopview.LoopView;
 
 import java.util.ArrayList;
@@ -23,21 +25,32 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startLoop();
+
+        initView();
     }
 
-    private void startLoop() {
+    private void initView() {
         LoopView loopView = (LoopView) findViewById(R.id.loopPlay);
-        List<ImageUrl> urls = new ArrayList<>();
-        ImageUrl imageUrl1 = new ImageUrl(UrlType.DRAWABLE, R.mipmap.car);
-        ImageUrl imageUrl2 = new ImageUrl(UrlType.DRAWABLE, R.mipmap.bose);
-        ImageUrl imageUrl3 = new ImageUrl(UrlType.DRAWABLE, R.mipmap.mac);
-        ImageUrl imageUrl4 = new ImageUrl(UrlType.DRAWABLE, R.mipmap.yohji);
-        urls.add(imageUrl1);
-        urls.add(imageUrl2);
-        urls.add(imageUrl3);
-        urls.add(imageUrl4);
-        loopView.setData(urls);
+        List<Object> urls = new ArrayList<>();
+        urls.add(R.mipmap.car);
+        urls.add(R.mipmap.bose);
+        urls.add("http://img1.dzwww.com:8080/tupian_pl/20150813/16/7858995348613407436.jpg");
+        urls.add(R.mipmap.yohji);
+        LoopAdapter loopAdapter = new LoopAdapter(this);
+        loopAdapter.setUrls(urls);
+        loopAdapter.setImageLoader(new AbstractLoopViewImageLoader() {
+            @Override
+            public void displyImage(int resId, ImageView iv) {
+                Glide.with(MainActivity.this).load(resId).into(iv);
+            }
+
+            @Override
+            public void displyImage(String url, ImageView iv) {
+                iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                Glide.with(MainActivity.this).load(url).into(iv);
+            }
+        });
+        loopView.setAdapter(loopAdapter);
         loopView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
