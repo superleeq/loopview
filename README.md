@@ -12,15 +12,15 @@
 Step 1.</br>
 ```javascript
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
-```javascript
 Step 2.</br>
+```javascript
 dependencies {
 	 compile 'com.github.superleeq:loopview:v2.5'
 }
@@ -56,7 +56,7 @@ v1.0 初始版</br>
 v2.0 移除无用类</br>
 v2.5 简化loopview</br>
 
-## 有问题反馈</br>
+## 反馈</br>
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流</br>
 * 邮件(superleeq@foxmail.com)
 * QQ: 446486198
