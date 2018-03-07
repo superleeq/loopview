@@ -44,7 +44,7 @@ dependencies {
             public void displyImage(String url, ImageView iv) {
                 //手动设置图片适配模式
                 //iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                //加载图片
+                //加载图片,Glide/ImageLoader/picasso/fresco 或自定义都可以
                 Glide.with(MainActivity.this).load(url).into(iv);
             }
         });
