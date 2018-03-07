@@ -9,17 +9,20 @@
 
 ##使用步骤：
 1,绑定图片
+```javascript
     LoopAdapter loopAdapter = new LoopAdapter(this);
-    loopAdapter.setUrls(urls);
-    loopAdapter.setImageLoader(new AbstractLoopViewImageLoader() {
-            @Override
-            public void displyImage(String url, ImageView iv) {
-                iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                Glide.with(MainActivity.this).load(url).into(iv);
-            }
-        });
+      loopAdapter.setUrls(urls);
+      loopAdapter.setImageLoader(new AbstractLoopViewImageLoader() {
+              @Override
+              public void displyImage(String url, ImageView iv) {
+                  //iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                  Glide.with(MainActivity.this).load(url).into(iv);
+              }
+          });
+```
 
 2,设置adapter
+```javascript
     loopView.setAdapter(loopAdapter);
     loopView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -27,6 +30,8 @@
                 Toast.makeText(view.getContext(), "position:" + position, Toast.LENGTH_SHORT).show();
             }
     });
+```
+
 
 ##有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
