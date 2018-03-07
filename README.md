@@ -77,6 +77,11 @@ v2.5 简化loopview</br>
 v2.6 优化监听</br>
 v2.7 优化依赖名</br>
 
+## 外部项目使用</br>
+* 恒大施工协同平台app 首页轮播图
+![home.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/home.png)
+
+
 ## 反馈</br>
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流</br>
 * 邮件(superleeq@foxmail.com)
