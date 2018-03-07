@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <com.superleeq.loopview.LoopView
-        android:id="@+id/loopPlay"
+        android:id="@+id/loopview"
         android:layout_width="fill_parent"
         android:layout_height="220dp" />
 

@@ -1,9 +1,7 @@
 package com.superleeq.loopview;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
-import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.PagerAdapter;
@@ -27,7 +25,7 @@ public class LoopView extends ViewPager {
     private long mLoopDelayMillis = 2000;
     private WeakReference<LoopView> mWeakReference;
     private int mSlop;
-    private AdapterView.OnItemClickListener mOnItemClickListener;
+    private ILoopViewListener mILoopViewListener;
 
     private static class UIHandler extends Handler {
         private WeakReference<LoopView> weakReference;
@@ -52,8 +50,8 @@ public class LoopView extends ViewPager {
         }
     }
 
-    public void setOnItemClickListener(AdapterView.OnItemClickListener listener) {
-        this.mOnItemClickListener = listener;
+    public void setILoopViewListener(ILoopViewListener mILoopViewListener) {
+        this.mILoopViewListener = mILoopViewListener;
     }
 
     public void setLoopDelayMillis(long loopDelayMillis) {
@@ -118,8 +116,8 @@ public class LoopView extends ViewPager {
     }
 
     private void onItemClick() {
-        if (mOnItemClickListener != null) {
-            mOnItemClickListener.onItemClick(null, this, getCurrentItem(), getCurrentItem());
+        if (mILoopViewListener != null) {
+            mILoopViewListener.onItemClick(getCurrentItem());
         }
     }
 
@@ -135,7 +133,6 @@ public class LoopView extends ViewPager {
 
     @Override
     public void setOnPageChangeListener(OnPageChangeListener listener) {
-
     }
 
     private void initLoopViewPager() {
@@ -173,9 +170,19 @@ public class LoopView extends ViewPager {
 
         @Override
         public void onPageSelected(int position) {
-
+            if (mILoopViewListener != null) {
+                mILoopViewListener.onPageSelected(getCurrentItem());
+            }
         }
     };
+
+    public interface ILoopViewListener {
+        //图片点击事件，便于跳转图片详情页
+        void onItemClick(int position);
+
+        //图片切换事件，便于绑定指示器
+        void onPageSelected(int position);
+    }
 
 
 }

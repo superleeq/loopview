@@ -2,8 +2,7 @@ package com.example.loopviewpager.app;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -30,7 +29,7 @@ public class MainActivity extends Activity {
     }
 
     private void initView() {
-        LoopView loopView = (LoopView) findViewById(R.id.loopPlay);
+        final LoopView loopView = (LoopView) findViewById(R.id.loopview);
         List<Object> urls = new ArrayList<>();
         urls.add(R.mipmap.car);
         urls.add(R.mipmap.bose);
@@ -46,15 +45,24 @@ public class MainActivity extends Activity {
 
             @Override
             public void displyImage(String url, ImageView iv) {
-                iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                //手动设置图片适配模式
+                //iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                //加载图片
                 Glide.with(MainActivity.this).load(url).into(iv);
             }
         });
         loopView.setAdapter(loopAdapter);
-        loopView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        loopView.setILoopViewListener(new LoopView.ILoopViewListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(view.getContext(), "position:" + position, Toast.LENGTH_SHORT).show();
+            public void onItemClick(int position) {
+                //跳转页面
+                Toast.makeText(loopView.getContext(), "position:" + position, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                //绑定指示器
+                Log.e("lq", "onPageSelected==" + position);
             }
         });
     }
