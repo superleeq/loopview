@@ -5,7 +5,7 @@
     android:background="@android:color/darker_gray"
     android:orientation="vertical">
 
-    <com.superleeq.loopview.loopview.LoopView
+    <com.superleeq.loopview.LoopView
         android:id="@+id/loopPlay"
         android:layout_width="fill_parent"
         android:layout_height="220dp" />

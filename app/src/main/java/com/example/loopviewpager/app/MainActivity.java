@@ -8,9 +8,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.superleeq.loopview.loopview.AbstractLoopViewImageLoader;
-import com.superleeq.loopview.loopview.LoopAdapter;
-import com.superleeq.loopview.loopview.LoopView;
+import com.superleeq.loopview.AbstractLoopViewImageLoader;
+import com.superleeq.loopview.LoopAdapter;
+import com.superleeq.loopview.LoopView;
 
 import java.util.ArrayList;
 import java.util.List;

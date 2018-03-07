@@ -8,6 +8,24 @@
 ## Screenshots</br>
 ![demo.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/demo.png)
 
+## 添加依赖：</br>
+Step 1.</br>
+```javascript
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+```javascript
+Step 2.</br>
+dependencies {
+	 compile 'com.github.superleeq:loopview:v2.0'
+}
+```
+
 ## 使用步骤：</br>
 1，绑定图片
 ```javascript

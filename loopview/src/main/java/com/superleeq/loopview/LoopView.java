@@ -1,7 +1,9 @@
-package com.superleeq.loopview.loopview;
+package com.superleeq.loopview;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.PagerAdapter;

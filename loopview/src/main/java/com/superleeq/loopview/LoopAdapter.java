@@ -1,4 +1,4 @@
-package com.superleeq.loopview.loopview;
+package com.superleeq.loopview;
 
 import android.content.Context;
 import android.net.Uri;
