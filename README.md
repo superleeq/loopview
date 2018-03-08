@@ -1,9 +1,11 @@
 ## LoopView自动轮播控件</br>
 
-1，支持自动轮播，可以设置轮播间隔时间，默认2秒</br>
-2，支持无限滑动，采用首尾填充的方案，杜绝跳动感，达到真实流畅的无限滑动</br>
-3，支持任意第三方图片加载库</br>
-4，支持手动设置图片适配模式</br>
+* 支持自动轮播</br>
+      支持设置轮播间隔时间，默认2秒</br>
+      支持禁用自动轮播</br>
+* 支持无限滑动，采用首尾填充的方案，杜绝闪动感，达到真实流畅的无限滑动</br>
+* 支持任意第三方图片加载库</br>
+* 支持手动设置图片缩放模式</br>
 
 ## Screenshots</br>
 ![demo.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/demo.png)
@@ -68,6 +70,14 @@ dependencies {
                 Log.e("lq", "onPageSelected==" + position);
             }
         });
+```
+
+3，其他
+```javascript
+        //禁用自动轮播 在setAdapter前调用
+        loopView.setEnableAutoPlay(false);
+        //设置轮播时间(毫秒)
+        loopView.setLoopDelayMillis(1000);
 ```
 
 ## 版本记录</br>

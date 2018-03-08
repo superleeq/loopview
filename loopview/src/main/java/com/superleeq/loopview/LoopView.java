@@ -10,7 +10,6 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
-import android.widget.AdapterView;
 
 import java.lang.ref.WeakReference;
 
@@ -21,6 +20,7 @@ import java.lang.ref.WeakReference;
 public class LoopView extends ViewPager {
 
     private boolean mIsAutoPlay;
+    private boolean mEnableAutoPlay = true;
     private UIHandler mUiHandler;
     private long mLoopDelayMillis = 2000;
     private WeakReference<LoopView> mWeakReference;
@@ -55,12 +55,23 @@ public class LoopView extends ViewPager {
     }
 
     public void setLoopDelayMillis(long loopDelayMillis) {
-        if (loopDelayMillis > 2000) {
+        if (loopDelayMillis > 0) {
             this.mLoopDelayMillis = loopDelayMillis;
         }
     }
 
+    public boolean isEnableAutoPlay() {
+        return mEnableAutoPlay;
+    }
+
+    public void setEnableAutoPlay(boolean enableAutoPlay) {
+        this.mEnableAutoPlay = enableAutoPlay;
+    }
+
     private void startLoop() {
+        if (!mEnableAutoPlay){
+            return;
+        }
         mIsAutoPlay = true;
         mUiHandler.removeMessages(-1);
         mUiHandler.sendEmptyMessageDelayed(-1, mLoopDelayMillis);

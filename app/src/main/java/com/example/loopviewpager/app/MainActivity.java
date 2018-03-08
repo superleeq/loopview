@@ -51,6 +51,10 @@ public class MainActivity extends Activity {
                 Glide.with(MainActivity.this).load(url).into(iv);
             }
         });
+        //禁用自动轮播 在setAdapter前调用
+        loopView.setEnableAutoPlay(true);
+        //设置轮播时间(毫秒)
+        loopView.setLoopDelayMillis(1000);
         loopView.setAdapter(loopAdapter);
         loopView.setILoopViewListener(new LoopView.ILoopViewListener() {
             @Override
@@ -65,6 +69,7 @@ public class MainActivity extends Activity {
                 Log.e("lq", "onPageSelected==" + position);
             }
         });
+
     }
 
 
