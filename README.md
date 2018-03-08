@@ -22,7 +22,7 @@ allprojects {
 Step 2.</br>
 ```javascript
 dependencies {
-	 compile 'com.github.superleeq:loopview:2.7'
+	 compile 'com.github.superleeq:loopview:2.8'
 }
 ```
 
