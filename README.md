@@ -87,8 +87,7 @@ v2.7 优化依赖名</br>
 v2.8 支持禁用自动轮播</br>
 
 ## 外部项目使用</br>
-* 恒大施工协同平台app 首页轮播图
-![home.png](https://github.com/superleeq/loopview/blob/master/app/src/main/res/raw/home.png)
+
 
 
 ## 反馈</br>
